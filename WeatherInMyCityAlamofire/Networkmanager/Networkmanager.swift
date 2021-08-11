@@ -40,12 +40,11 @@ class NetworkManager {
 
     func fetchCurrentImage(with complition: @escaping (CurrentUserImage) -> Void) {
         
-        let randomPicture = ["London", "Moscow", "Prague", "Berlin", "Tokyo", "river", "fish"]
-        let index = Int.random(in: 0..<randomPicture.count)
-        let picture = randomPicture[index]
+        let locationName = ["London", "Moscow", "Prague", "Berlin", "Tokyo", "Pekin", "Paris"]
+                let index = Int.random(in: 0..<locationName.count)
+                let picture = locationName[index]
         
         let urlString = "https://api.unsplash.com/search/photos?page=1&per_page=1&query=\(picture)&client_id=3yNajiW5PRfO9IVeay-2unXNA226l5Bw-WOBB0FwtHg"
-        
         
         AF.request(urlString)
             .validate()

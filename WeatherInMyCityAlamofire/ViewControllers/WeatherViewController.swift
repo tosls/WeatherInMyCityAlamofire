@@ -18,16 +18,11 @@ class WeatherViewController: UIViewController {
     var userLocation = CLLocationManager()
     var userCoordinates: CLLocation?
     
-    private var currentUserWeather: CurrentUserWeather?
-    
-    let imageUrl = "https://api.unsplash.com/search/photos?page=1&per_page=1&query=sun&client_id=3yNajiW5PRfO9IVeay-2unXNA226l5Bw-WOBB0FwtHg"
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ImageViewForCity.layer.cornerRadius = 10
-        
+
         setupUserLocation()
         fetchCurrentImage()
     }
@@ -67,6 +62,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
         if !locations.isEmpty, userCoordinates == nil {
             userCoordinates = locations.last
             userLocation.startUpdatingLocation()
+            
             requestWeatherForLocation()
          }
      }
