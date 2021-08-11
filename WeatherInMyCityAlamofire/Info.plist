@@ -62,5 +62,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Разрешите доступ к вашей геоинформации для получения данных о погоде в вашем регионе</string>
 </dict>
 </plist>
